@@ -1,0 +1,68 @@
+# Content configuration version
+version: 2
+
+# Personal info
+name: Yeonjoon Jung
+title: Undergraduate Student at POSTECH | ML Researcher/Engineer at SqueezeBits
+email: yeonjoon.jung@postech.ac.kr
+
+# Dark Mode (true/false/never)
+darkmode: false
+
+# Social links
+github_username:  yeonjoon-jung01
+linkedin_username: yeonjoon-jung
+
+# About Section
+about_profile_image: images/profile.jpg
+about_content: |
+  Hi, my name is Yeonjoon Jung, and I am an undergraduate student at POSTECH, majoring in Convergence IT Engineering and Computer Science and Engineering. 
+  I am currently on a leave of absence, working as an ML Researcher/Engineer at SqueezeBits, where I focus on optimizing AI models. <br>
+  My recent interests lie in efficient AI, and their applications in large language models (LLMs) and diffusion models.
+
+content:
+  - title: News
+    layout: text
+    content: |
+      [2025/09] Our <a href="https://arxiv.org/abs/2505.20355">paper</a> is accepted by NeurIPS 2025 as a spotlight <br>
+      [2024/10] Start releasing <a href="https://blog.squeezebits.com/category/vllm-vs-trt-llm/">Technical Blog Posts</a> comparing LLM inference performance<br>
+      [2023/11] Our <a href="https://arxiv.org/abs/2312.05611">paper</a> is accepted by LoG 2023 extended abstract track <br>
+      [2023/08] I joined AI startup, <a href="https://squeezebits.com">SqueezeBits</a>, as an ML Researcher/Engineer <br>
+      [2023/03] I joined <a href="https://sites.google.com/view/sungsooahn0215/home">Prof. Ahn's research group</a> as an undergraduate researcher <br>
+
+  - title: Publications
+    layout: text
+    content: |
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>GraLoRA: Granular Low-Rank Adaptation for Parameter-Efficient Fine-Tuning</b> </p>
+      <b>Yeonjoon Jung</b>, Daehyun Ahn, Hyungjun Kim, Taesu Kim, Eunhyeok Park <br>
+      <i>Neural Information Processing Systems (NeurIPS) 2025 Spotlight</i> <br>
+      [ArXiv](https://arxiv.org/abs/2505.20355), [Github](https://github.com/SqueezeBits/GraLoRA) <br>
+
+      <br>
+
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>Triplet edge attention for algorithmic reasoning</b> </p>
+      <b>Yeonjoon Jung</b>, Sungsoo Ahn<br>
+      <i>Learning on Graph Conference (LoG), 2023, extended abstract</i> <br>
+      [ArXiv](https://arxiv.org/abs/2312.05611) <br>
+
+  - title: Education
+    layout: text
+    content: |
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>POSTECH</b> </p>
+      2020/03 ~ Current <br>
+      <i>Major: Convergence IT Engineering and Computer Science and Engineering</i> <br>
+
+      <br>
+
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>Korea Science Academy of KAIST</b> </p>
+      2017/03 ~ 2020/02 <br>
+          
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
