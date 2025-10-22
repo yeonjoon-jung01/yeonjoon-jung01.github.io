@@ -16,46 +16,84 @@ linkedin_username: yeonjoon-jung
 # About Section
 about_profile_image: images/profile.jpg
 about_content: |
-  Hi, my name is Yeonjoon Jung, and I am an undergraduate student at POSTECH, majoring in Convergence IT Engineering and Computer Science and Engineering. 
-  I am currently on a leave of absence, working as an ML Researcher/Engineer at SqueezeBits, where I focus on optimizing AI models. <br>
-  My recent interests lie in efficient AI, and their applications in large language models (LLMs) and diffusion models.
+  Hi, my name is <b>Yeonjoon Jung</b>, and I am an undergraduate student at <b>POSTECH</b> 
+  majoring in <b>Convergence IT Engineering</b> and <b>Computer Science and Engineering</b>. 
+  I am currently taking a leave of absence to complete my mandatory alternative military service 
+  as an <b>ML Researcher/Engineer</b> at <b>SqueezeBits</b>, where I focus on <b>optimizing and accelerating AI models</b>.<br><br>
+
+  My recent research interests span the field of <b>Efficient AI</b>—including <b>quantization</b>, 
+  <b>inference optimization</b>, <b>parameter-efficient fine-tuning (PEFT)</b>-with applications 
+  to <b>large language models (LLMs)</b> and <b>diffusion models</b>.<br><br>
+
+  I am always open to <b>collaborations</b> and new research opportunities. 
+  Please feel free to <a href="mailto:yeonjoon.jung@postech.ac.kr">contact me</a>.
 
 content:
   - title: News
     layout: text
     content: |
-      [2025/09] Our <a href="https://arxiv.org/abs/2505.20355">paper</a> is accepted by NeurIPS 2025 as a spotlight <br>
-      [2024/10] Start releasing <a href="https://blog.squeezebits.com/category/vllm-vs-trt-llm/">Technical Blog Posts</a> comparing LLM inference performance<br>
-      [2023/11] Our <a href="https://arxiv.org/abs/2312.05611">paper</a> is accepted by LoG 2023 extended abstract track <br>
-      [2023/08] I joined AI startup, <a href="https://squeezebits.com">SqueezeBits</a>, as an ML Researcher/Engineer <br>
-      [2023/03] I joined <a href="https://sites.google.com/view/sungsooahn0215/home">Prof. Ahn's research group</a> as an undergraduate researcher <br>
+      [09/2025] Our [paper](https://arxiv.org/abs/2505.20355) is accepted by NeurIPS 2025 as a <span style="color: red;">Spotlight</span> <br>
+      [06/2025] Released [blog post](https://blog.squeezebits.com/gralora-boosting-fine-tuning-accuracy) on explaining GraLoRA, a novel LoRA fine-tuning method. <br>
+      [01/2025] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-13-visionlanguage-models-40761) on exploring Vision Language Model serving. <br>
+      [12/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-12-automatic-prefix-caching-38189) on effectiveness of prefix caching. <br>
+      [12/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-11-speculative-decoding-37301) on understanding speculative decoding. <br>
+      [10/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-2-towards-optimal-batching-for-llm-serving-31349) on analyzing batching in LLM serving <br>
+      [10/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-1-an-overall-evaluation-30703) on evaluating LLM serving with key metrics <br>
+      [11/2023] Our [paper](https://arxiv.org/abs/2312.05611) is accepted by LoG 2023 extended abstract track <br>
+      [08/2023] I joined AI startup, [SqueezeBits](https://squeezebits.com), as an ML Researcher/Engineer <br>
+      [03/2023] I joined [Prof. Ahn's research group](https://sites.google.com/view/sungsooahn0215/home) as an undergraduate researcher <br>
 
-  - title: Publications
+  - title: Papers
     layout: text
     content: |
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>GraLoRA: Granular Low-Rank Adaptation for Parameter-Efficient Fine-Tuning</b> </p>
-      <b>Yeonjoon Jung</b>, Daehyun Ahn, Hyungjun Kim, Taesu Kim, Eunhyeok Park <br>
-      <i>Neural Information Processing Systems (NeurIPS) 2025 Spotlight</i> <br>
-      [ArXiv](https://arxiv.org/abs/2505.20355), [Github](https://github.com/SqueezeBits/GraLoRA) <br>
-
-      <br>
+      <u>Yeonjoon Jung</u>, Daehyun Ahn, Hyungjun Kim, Taesu Kim, Eunhyeok Park <br>
+      <i>Neural Information Processing Systems (NeurIPS) 2025 <span style="color: red;">Spotlight</span></i> <br>
+      [ArXiv](https://arxiv.org/abs/2505.20355), [Github](https://github.com/SqueezeBits/GraLoRA) <br><br>
 
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>Triplet edge attention for algorithmic reasoning</b> </p>
-      <b>Yeonjoon Jung</b>, Sungsoo Ahn<br>
+      <u>Yeonjoon Jung</u>, Sungsoo Ahn <br>
       <i>Learning on Graph Conference (LoG), 2023, extended abstract</i> <br>
       [ArXiv](https://arxiv.org/abs/2312.05611) <br>
+
+  - title: Blogs
+    layout: text
+    content: |
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>GraLoRA: Boosting Fine-Tuning Accuracy Without Extra Cost</b> </p>
+      Introducing GraLoRA, a novel LoRA fine-tuning method <br>
+      [Link](https://blog.squeezebits.com/gralora-boosting-fine-tuning-accuracy) <br><br>
+
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #13. Vision Language Models</b> </p>
+      Exploring Vision Language Model serving <br>
+      [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-13-visionlanguage-models-40761) <br><br>
+
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #12. Automatic Prefix Caching</b> </p>
+      Effectiveness of prefix caching in LLM serving <br>
+      [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-12-automatic-prefix-caching-38189) <br><br>
+
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #11. Speculative Decoding</b> </p>
+      Understanding speculative decoding in LLM serving <br>
+      [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-11-speculative-decoding-37301) <br><br>
+
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #2. Towards Optimal Batching for LLM Serving</b> </p>
+      Analyzing batching in LLM serving <br>
+      [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-2-towards-optimal-batching-for-llm-serving-31349) or
+      [Link2](https://medium.com/squeezebits-team-blog/vllm-vs-tensorrt-llm-2-towards-optimal-batching-for-llm-serving-490b1735c140) <br><br>
+
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #1. An Overall Evaluation</b> </p>
+      Evaluating LLM serving with key metrics <br>
+      [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-1-an-overall-evaluation-30703) or
+      [Link2](https://medium.com/squeezebits-team-blog/vllm-vs-tensorrt-llm-1-an-overall-evaluation-88f281bf01c7) <br><br>
 
   - title: Education
     layout: text
     content: |
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>POSTECH</b> </p>
-      2020/03 ~ Current <br>
-      <i>Major: Convergence IT Engineering and Computer Science and Engineering</i> <br>
-
-      <br>
+      <i>03/2020 - Present</i> <br>
+      <i>Major: Convergence IT Engineering and Computer Science and Engineering</i> <br><br>
 
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>Korea Science Academy of KAIST</b> </p>
-      2017/03 ~ 2020/02 <br>
+      <i>03/2017 - 02/2020</i> <br>
           
 # Build settings
 remote_theme: sproogen/resume-theme
