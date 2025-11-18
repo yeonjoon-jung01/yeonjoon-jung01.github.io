@@ -32,16 +32,18 @@ content:
   - title: News
     layout: text
     content: |
-      [09/2025] Our [paper](https://arxiv.org/abs/2505.20355) is accepted by NeurIPS 2025 as a <span style="color: red;">Spotlight</span> <br>
+      [11/2025] GraLoRA is now available in the [HuggingFace PEFT Library](https://github.com/huggingface/peft/blob/main/examples/gralora_finetuning/README.md). <br>
+      [10/2025] Released [blog post](https://blog.squeezebits.com/77516) on efficient pipeline for diffusion model inference. <br>
+      [09/2025] Our [paper](https://arxiv.org/abs/2505.20355) is accepted by NeurIPS 2025 as a <span style="color: red;">Spotlight</span>. <br>
       [06/2025] Released [blog post](https://blog.squeezebits.com/gralora-boosting-fine-tuning-accuracy) on explaining GraLoRA, a novel LoRA fine-tuning method. <br>
       [01/2025] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-13-visionlanguage-models-40761) on exploring Vision Language Model serving. <br>
       [12/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-12-automatic-prefix-caching-38189) on effectiveness of prefix caching. <br>
       [12/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-11-speculative-decoding-37301) on understanding speculative decoding. <br>
-      [10/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-2-towards-optimal-batching-for-llm-serving-31349) on analyzing batching in LLM serving <br>
-      [10/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-1-an-overall-evaluation-30703) on evaluating LLM serving with key metrics <br>
-      [11/2023] Our [paper](https://arxiv.org/abs/2312.05611) is accepted by LoG 2023 extended abstract track <br>
-      [08/2023] I joined AI startup, [SqueezeBits](https://squeezebits.com), as an ML Researcher/Engineer <br>
-      [03/2023] I joined [Prof. Ahn's research group](https://sites.google.com/view/sungsooahn0215/home) as an undergraduate researcher <br>
+      [10/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-2-towards-optimal-batching-for-llm-serving-31349) on analyzing batching in LLM serving. <br>
+      [10/2024] Released [blog post](https://blog.squeezebits.com/vllm-vs-tensorrtllm-1-an-overall-evaluation-30703) on evaluating LLM serving with key metrics. <br>
+      [11/2023] Our [paper](https://arxiv.org/abs/2312.05611) is accepted by LoG 2023 extended abstract track. <br>
+      [08/2023] I joined AI startup, [SqueezeBits](https://squeezebits.com), as an ML Researcher/Engineer. <br>
+      [03/2023] I joined [Prof. Ahn's research group](https://sites.google.com/view/sungsooahn0215/home) as an undergraduate researcher. <br>
 
   - title: Papers
     layout: text
@@ -59,29 +61,33 @@ content:
   - title: Blogs
     layout: text
     content: |
+      <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>Winning both speed and quality: How Yetter deals with diffusion models</b> </p>
+      Introducing efficient pipeline for diffusion model inference |
+      [Link](https://blog.squeezebits.com/77516) <br><br>
+
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>GraLoRA: Boosting Fine-Tuning Accuracy Without Extra Cost</b> </p>
-      Introducing GraLoRA, a novel LoRA fine-tuning method <br>
+      Introducing GraLoRA, a novel LoRA fine-tuning method |
       [Link](https://blog.squeezebits.com/gralora-boosting-fine-tuning-accuracy) <br><br>
 
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #13. Vision Language Models</b> </p>
-      Exploring Vision Language Model serving <br>
+      Exploring Vision Language Model serving |
       [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-13-visionlanguage-models-40761) <br><br>
 
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #12. Automatic Prefix Caching</b> </p>
-      Effectiveness of prefix caching in LLM serving <br>
+      Effectiveness of prefix caching in LLM serving |
       [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-12-automatic-prefix-caching-38189) <br><br>
 
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #11. Speculative Decoding</b> </p>
-      Understanding speculative decoding in LLM serving <br>
+      Understanding speculative decoding in LLM serving |
       [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-11-speculative-decoding-37301) <br><br>
 
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #2. Towards Optimal Batching for LLM Serving</b> </p>
-      Analyzing batching in LLM serving <br>
+      Analyzing batching in LLM serving |
       [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-2-towards-optimal-batching-for-llm-serving-31349) or
       [Link2](https://medium.com/squeezebits-team-blog/vllm-vs-tensorrt-llm-2-towards-optimal-batching-for-llm-serving-490b1735c140) <br><br>
 
       <p style="font-weight: 300; font-size:2.0rem; margin-bottom:3px;"> <b>[vLLM vs TensorRT-LLM] #1. An Overall Evaluation</b> </p>
-      Evaluating LLM serving with key metrics <br>
+      Evaluating LLM serving with key metrics |
       [Link](https://blog.squeezebits.com/vllm-vs-tensorrtllm-1-an-overall-evaluation-30703) or
       [Link2](https://medium.com/squeezebits-team-blog/vllm-vs-tensorrt-llm-1-an-overall-evaluation-88f281bf01c7) <br><br>
 
