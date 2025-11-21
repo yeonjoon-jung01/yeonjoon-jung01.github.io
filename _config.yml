@@ -32,7 +32,7 @@ content:
   - title: News
     layout: text
     content: |
-      [11/2025] GraLoRA is now available in the [HuggingFace PEFT Library](https://github.com/huggingface/peft/blob/main/examples/gralora_finetuning/README.md). <br>
+      [11/2025] GraLoRA is now available in the [HuggingFace PEFT Library](https://huggingface.co/docs/peft/package_reference/gralora). <br>
       [10/2025] Released [blog post](https://blog.squeezebits.com/77516) on efficient pipeline for diffusion model inference. <br>
       [09/2025] Our [paper](https://arxiv.org/abs/2505.20355) is accepted by NeurIPS 2025 as a <span style="color: red;">Spotlight</span>. <br>
       [06/2025] Released [blog post](https://blog.squeezebits.com/gralora-boosting-fine-tuning-accuracy) on explaining GraLoRA, a novel LoRA fine-tuning method. <br>
