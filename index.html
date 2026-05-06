@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeonjoon Jung</title>
+    <meta
+      name="description"
+      content="Yeonjoon Jung — Undergraduate Student at POSTECH and ML Researcher/Engineer at SqueezeBits."
+    />
+    <style>
+      :root {
+        --bg: #f5f5f7;
+        --surface: rgba(255, 255, 255, 0.88);
+        --card: #ffffff;
+        --text: #1d1d1f;
+        --muted: #6e6e73;
+        --line: rgba(15, 23, 42, 0.08);
+        --accent: #0066cc;
+        --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+        --radius-xl: 32px;
+        --radius-lg: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 28%),
+          linear-gradient(180deg, #fbfbfd 0%, var(--bg) 48%, #eef2f5 100%);
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(18px);
+        background: rgba(245, 245, 247, 0.78);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+      }
+
+      .topbar-inner,
+      .page {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 18px 0;
+      }
+
+      .brand {
+        color: var(--text);
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 14px;
+      }
+
+      .nav a {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .nav a:hover,
+      .brand:hover,
+      .button:hover {
+        color: var(--text);
+      }
+
+      .page {
+        padding: 48px 0 88px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+        gap: 48px;
+        align-items: center;
+        padding: 10px 0 56px;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(3.2rem, 8vw, 6rem);
+        line-height: 0.94;
+        letter-spacing: -0.06em;
+      }
+
+      .hero-role {
+        margin: 18px 0 0;
+        font-size: clamp(1.1rem, 2vw, 1.55rem);
+        color: var(--muted);
+        letter-spacing: -0.02em;
+      }
+
+      .intro {
+        margin-top: 28px;
+        max-width: 700px;
+      }
+
+      .intro p {
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .intro strong {
+        color: var(--text);
+        font-weight: 650;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        background: var(--text);
+        color: #fff;
+        box-shadow: 0 10px 30px rgba(29, 29, 31, 0.12);
+        transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+      }
+
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.78);
+        border-color: var(--line);
+        color: var(--text);
+        box-shadow: none;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .portrait {
+        padding: 22px;
+        border-radius: var(--radius-xl);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(240, 243, 246, 0.96));
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow);
+      }
+
+      .portrait img {
+        width: 100%;
+        aspect-ratio: 5 / 6.35;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+      }
+
+      .section {
+        margin-top: 18px;
+        padding-top: 18px;
+      }
+
+      .section-head {
+        margin-bottom: 18px;
+      }
+
+      .section-label {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .section h2 {
+        margin: 8px 0 0;
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+
+      .panel {
+        padding: 30px;
+        border-radius: var(--radius-xl);
+        background: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow);
+      }
+
+      .news-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .news-item {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 20px;
+        padding: 16px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .news-item:first-child {
+        padding-top: 0;
+        border-top: none;
+      }
+
+      .news-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .news-date {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .news-text {
+        color: var(--muted);
+      }
+
+      .news-text strong {
+        color: #d24f62;
+        font-weight: 650;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        height: 100%;
+        padding: 24px;
+        border-radius: var(--radius-lg);
+        background: var(--card);
+        border: 1px solid var(--line);
+      }
+
+      .card h3 {
+        margin: 0 0 12px;
+        font-size: 1.35rem;
+        line-height: 1.28;
+        letter-spacing: -0.03em;
+      }
+
+      .meta,
+      .body-text {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .meta + .meta,
+      .body-text + .body-text {
+        margin-top: 6px;
+      }
+
+      .me {
+        color: var(--text);
+        font-weight: 650;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .links a {
+        font-weight: 600;
+      }
+
+      @media (max-width: 960px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .portrait {
+          max-width: 560px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .topbar-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav {
+          justify-content: flex-start;
+        }
+
+        .page,
+        .topbar-inner {
+          width: min(100% - 28px, 1120px);
+        }
+
+        .page {
+          padding-top: 32px;
+        }
+
+        .panel {
+          padding: 22px;
+        }
+
+        .news-item {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#top">Yeonjoon Jung</a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#papers">Papers</a>
+          <a href="#blogs">Blogs</a>
+          <a href="#education">Education</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page" id="top">
+      <section class="hero" id="about">
+        <div>
+          <h1>Yeonjoon Jung</h1>
+          <p class="hero-role">Undergraduate Student at POSTECH · ML Researcher/Engineer at SqueezeBits</p>
+
+          <div class="intro">
+            <p>
+              Hi, my name is <strong>Yeonjoon Jung</strong>, and I am an undergraduate student at
+              <strong>POSTECH</strong> majoring in <strong>Convergence IT Engineering</strong> &
+              <strong>Computer Science and Engineering</strong>.
+            </p>
+            <p>
+              I am currently taking a leave of absence to complete my mandatory alternative military service
+              as an <strong>ML Researcher/Engineer</strong> at <strong>SqueezeBits</strong>, where I focus on
+              <strong>optimizing and accelerating AI models</strong>.
+            </p>
+            <p>
+              My recent research interests span <strong>Efficient AI</strong>, including
+              <strong>quantization</strong>, <strong>inference optimization</strong>, and
+              <strong>parameter-efficient fine-tuning (PEFT)</strong>, with applications to
+              <strong>large language models (LLMs)</strong> and <strong>diffusion models</strong>.
+            </p>
+            <p>
+              I am always open to collaborations and new research opportunities.
+              Feel free to <a href="mailto:yeonjoon.jung@postech.ac.kr">contact me</a>.
+            </p>
+          </div>
+
+          <div class="actions">
+            <a class="button" href="mailto:yeonjoon.jung@postech.ac.kr">Email</a>
+            <a class="button secondary" href="https://github.com/yeonjoon-jung01" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/yeonjoon-jung/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="portrait">
+          <img src="profile.jpg" alt="Portrait of Yeonjoon Jung" />
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <div class="section-head">
+          <span class="section-label">Updates</span>
+          <h2>News</h2>
+        </div>
+        <div class="panel">
+          <ul class="news-list">
+            <li class="news-item">
+              <div class="news-date">11/2025</div>
+              <div class="news-text">GraLoRA is now available in the <a href="https://huggingface.co/docs/peft/package_reference/gralora" target="_blank" rel="noreferrer">HuggingFace PEFT Library</a>.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">10/2025</div>
+              <div class="news-text">Released a <a href="https://blog.squeezebits.com/77516" target="_blank" rel="noreferrer">blog post</a> on an efficient pipeline for diffusion model inference.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">09/2025</div>
+              <div class="news-text">Our <a href="https://arxiv.org/abs/2505.20355" target="_blank" rel="noreferrer">paper</a> was accepted by NeurIPS 2025 as a <strong>Spotlight</strong>.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">06/2025</div>
+              <div class="news-text">Released a <a href="https://blog.squeezebits.com/gralora-boosting-fine-tuning-accuracy" target="_blank" rel="noreferrer">blog post</a> explaining GraLoRA, a novel LoRA fine-tuning method.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">01/2025</div>
+              <div class="news-text">Released a <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-13-visionlanguage-models-40761" target="_blank" rel="noreferrer">blog post</a> on Vision Language Model serving.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">12/2024</div>
+              <div class="news-text">Released <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-12-automatic-prefix-caching-38189" target="_blank" rel="noreferrer">a post on prefix caching</a> and <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-11-speculative-decoding-37301" target="_blank" rel="noreferrer">another on speculative decoding</a>.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">10/2024</div>
+              <div class="news-text">Released posts on <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-2-towards-optimal-batching-for-llm-serving-31349" target="_blank" rel="noreferrer">optimal batching</a> and an <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-1-an-overall-evaluation-30703" target="_blank" rel="noreferrer">overall LLM serving evaluation</a>.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">11/2023</div>
+              <div class="news-text">Our <a href="https://arxiv.org/abs/2312.05611" target="_blank" rel="noreferrer">paper</a> was accepted to the LoG 2023 extended abstract track.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">08/2023</div>
+              <div class="news-text">Joined <a href="https://squeezebits.com" target="_blank" rel="noreferrer">SqueezeBits</a> as an ML Researcher/Engineer.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">03/2023</div>
+              <div class="news-text">Joined <a href="https://sites.google.com/view/sungsooahn0215/home" target="_blank" rel="noreferrer">Prof. Ahn's research group</a> as an undergraduate researcher.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="papers">
+        <div class="section-head">
+          <span class="section-label">Research</span>
+          <h2>Papers</h2>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>GraLoRA: Granular Low-Rank Adaptation for Parameter-Efficient Fine-Tuning</h3>
+            <p class="meta"><span class="me">Yeonjoon Jung</span>, Daehyun Ahn, Hyungjun Kim, Taesu Kim, Eunhyeok Park</p>
+            <p class="meta">Neural Information Processing Systems (NeurIPS) 2025 · Spotlight</p>
+            <div class="links">
+              <a href="https://arxiv.org/abs/2505.20355" target="_blank" rel="noreferrer">ArXiv</a>
+              <a href="https://github.com/SqueezeBits/GraLoRA" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Triplet edge attention for algorithmic reasoning</h3>
+            <p class="meta"><span class="me">Yeonjoon Jung</span>, Sungsoo Ahn</p>
+            <p class="meta">Learning on Graph Conference (LoG), 2023 · Extended abstract</p>
+            <div class="links">
+              <a href="https://arxiv.org/abs/2312.05611" target="_blank" rel="noreferrer">ArXiv</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="blogs">
+        <div class="section-head">
+          <span class="section-label">Writing</span>
+          <h2>Blogs</h2>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Winning both speed and quality: How Yetter deals with diffusion models</h3>
+            <p class="body-text">Introducing an efficient pipeline for diffusion model inference.</p>
+            <div class="links">
+              <a href="https://blog.squeezebits.com/77516" target="_blank" rel="noreferrer">Read</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>GraLoRA: Boosting Fine-Tuning Accuracy Without Extra Cost</h3>
+            <p class="body-text">Introducing GraLoRA, a novel LoRA fine-tuning method.</p>
+            <div class="links">
+              <a href="https://blog.squeezebits.com/gralora-boosting-fine-tuning-accuracy" target="_blank" rel="noreferrer">Read</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>[vLLM vs TensorRT-LLM] #13. Vision Language Models</h3>
+            <p class="body-text">Exploring Vision Language Model serving.</p>
+            <div class="links">
+              <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-13-visionlanguage-models-40761" target="_blank" rel="noreferrer">Read</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>[vLLM vs TensorRT-LLM] #12. Automatic Prefix Caching</h3>
+            <p class="body-text">The effectiveness of prefix caching in LLM serving.</p>
+            <div class="links">
+              <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-12-automatic-prefix-caching-38189" target="_blank" rel="noreferrer">Read</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>[vLLM vs TensorRT-LLM] #11. Speculative Decoding</h3>
+            <p class="body-text">Understanding speculative decoding in LLM serving.</p>
+            <div class="links">
+              <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-11-speculative-decoding-37301" target="_blank" rel="noreferrer">Read</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>[vLLM vs TensorRT-LLM] #2. Towards Optimal Batching for LLM Serving</h3>
+            <p class="body-text">Analyzing batching in LLM serving.</p>
+            <div class="links">
+              <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-2-towards-optimal-batching-for-llm-serving-31349" target="_blank" rel="noreferrer">Read</a>
+              <a href="https://medium.com/squeezebits-team-blog/vllm-vs-tensorrt-llm-2-towards-optimal-batching-for-llm-serving-490b1735c140" target="_blank" rel="noreferrer">Medium</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>[vLLM vs TensorRT-LLM] #1. An Overall Evaluation</h3>
+            <p class="body-text">Evaluating LLM serving with key metrics.</p>
+            <div class="links">
+              <a href="https://blog.squeezebits.com/vllm-vs-tensorrtllm-1-an-overall-evaluation-30703" target="_blank" rel="noreferrer">Read</a>
+              <a href="https://medium.com/squeezebits-team-blog/vllm-vs-tensorrt-llm-1-an-overall-evaluation-88f281bf01c7" target="_blank" rel="noreferrer">Medium</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-head">
+          <span class="section-label">Background</span>
+          <h2>Education</h2>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>POSTECH</h3>
+            <p class="meta">03/2020 - Present</p>
+            <p class="body-text">Major: Convergence IT Engineering and Computer Science and Engineering</p>
+          </article>
+
+          <article class="card">
+            <h3>Korea Science Academy of KAIST</h3>
+            <p class="meta">03/2017 - 02/2020</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
